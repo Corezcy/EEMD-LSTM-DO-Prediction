@@ -1,0 +1,74 @@
+apply plugin: 'findbugs'
+apply plugin: 'com.android.application'
+apply plugin: "com.mob.sdk"
+
+
+MobSDK {
+    appKey "2b0c7cd5f3274"
+    appSecret "52f9405486d31d14c194ffffc212e3e451dp"
+    SMSSDK {
+        gui false
+    }
+}
+
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.DO.Prediction.client"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []    //disable automatic ndk-build
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+//    androidTestCompile ('com.android.support.test.espresso: espresso-core: 3.0.2', {
+//        exclude group: 'com.android.support',  module: 'support-annotations'
+//    })
+
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.google.code.gson:gson:2.7'
+    implementation 'org.litepal.android:core:1.3.2'
+    implementation "com.github.bumptech.glide:glide:3.7.0"
+    implementation 'com.android.support:percent:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
+    //短信验证
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'org.jetbrains:annotations-java5:15.0'
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/Plugin_SDK_Android_V2.0.jar')
+    implementation files('libs/hellocharts-library-1.5.8.jar')
+    implementation files('libs/sdk_HeWeather_Public_Android_V3.0.jar')
+    implementation files('libs/jsoup-1.10.2.jar')
+    implementation files('libs/activation.jar')
+    implementation files('libs/additionnal.jar')
+    implementation files('libs/mail.jar')
+}

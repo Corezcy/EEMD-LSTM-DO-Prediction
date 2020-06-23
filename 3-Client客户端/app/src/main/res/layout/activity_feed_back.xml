@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:id="@+id/backup"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="5dp"
+                android:src="@drawable/ic_backup" />
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true">
+
+            <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:padding="9dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="14dp"
+                    android:text="信息反馈"
+                    android:textColor="@color/contents_text"
+                    android:textSize="20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <EditText
+            android:id="@+id/help_feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="274dp"
+            android:gravity="top"
+            android:hint="请输入您的反馈意见(字数500以内)！"
+            android:lines="5"
+            android:text="">
+
+    </EditText>
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+        <Button
+                android:text="提交意见"
+                android:textColor="@color/white"
+                android:id="@+id/feedback"
+                android:background="@drawable/button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        </Button>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

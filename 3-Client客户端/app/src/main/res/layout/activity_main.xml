@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/back"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/dodgerblue"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true">
+
+            <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="9dp"
+                    android:text="溶解氧预测APP"
+                    android:textColor="@color/contents_text"
+                    android:textSize="20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <EditText
+            android:id="@+id/username"
+            android:layout_marginTop="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:hint="用户名"
+            android:inputType="phone" />
+
+    <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:hint="密码"
+            android:inputType="textPassword" />
+
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style"
+                android:layout_weight="1"
+                android:alpha="0"
+                android:textColor="@color/white" />
+
+        <Button
+                android:id="@+id/login"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:padding="@dimen/smssdk_authorize_text_size_l"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@drawable/button_style"
+                android:textColor="@color/white"
+                android:text="登录" />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style"
+                android:alpha="0"
+                android:textColor="@color/white" />
+
+        <Button
+                android:id="@+id/register"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="@dimen/smssdk_authorize_text_size_l"
+                android:background="@drawable/button_style"
+                android:text="注册"
+                android:textColor="@color/white" />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style"
+                android:alpha="0"
+                android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

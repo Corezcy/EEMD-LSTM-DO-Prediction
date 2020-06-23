@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:maxLevel="0" android:drawable="@drawable/weather_sunny" />
+    <item android:maxLevel="1" android:drawable="@drawable/weather_mostlycloudy" />
+    <item android:maxLevel="2" android:drawable="@drawable/weather_mostlycloudy" />
+    <item android:maxLevel="3" android:drawable="@drawable/rain" />
+    <item android:maxLevel="4" android:drawable="@drawable/rain" />
+    <item android:maxLevel="5" android:drawable="@drawable/weather_rain" />
+    <item android:maxLevel="6" android:drawable="@drawable/icerain" />
+    <item android:maxLevel="7" android:drawable="@drawable/rain" />
+    <item android:maxLevel="8" android:drawable="@drawable/rain" />
+    <item android:maxLevel="9" android:drawable="@drawable/rain" />
+    <item android:maxLevel="10" android:drawable="@drawable/rain" />
+    <item android:maxLevel="11" android:drawable="@drawable/rain" />
+    <item android:maxLevel="12" android:drawable="@drawable/rain" />
+    <item android:maxLevel="13" android:drawable="@drawable/snow" />
+    <item android:maxLevel="14" android:drawable="@drawable/snow" />
+    <item android:maxLevel="15" android:drawable="@drawable/snow" />
+    <item android:maxLevel="16" android:drawable="@drawable/snow" />
+    <item android:maxLevel="17" android:drawable="@drawable/snow" />
+    <item android:maxLevel="18" android:drawable="@drawable/weather_mostlycloudy" />
+    <item android:maxLevel="19" android:drawable="@drawable/weather_icyrain" />
+    <item android:maxLevel="20" android:drawable="@drawable/weather_mostlycloudy" />
+    <item android:maxLevel="21" android:drawable="@drawable/rain" />
+    <item android:maxLevel="22" android:drawable="@drawable/rain" />
+    <item android:maxLevel="23" android:drawable="@drawable/rain" />
+    <item android:maxLevel="24" android:drawable="@drawable/rain" />
+    <item android:maxLevel="25" android:drawable="@drawable/rain" />
+    <item android:maxLevel="26" android:drawable="@drawable/snow" />
+    <item android:maxLevel="27" android:drawable="@drawable/snow" />
+    <item android:maxLevel="28" android:drawable="@drawable/snow" />
+    <item android:maxLevel="29" android:drawable="@drawable/weather_mostlycloudy" />
+    <item android:maxLevel="30" android:drawable="@drawable/weather_mostlycloudy" />
+    <item android:maxLevel="31" android:drawable="@drawable/weather_mostlycloudy" />
+    <item android:maxLevel="53" android:drawable="@drawable/weather_mostlycloudy" />
+</level-list>

@@ -1,0 +1,10 @@
+<litepal>
+    <dbname value="cool_weather"/>
+    <version value="1"/>
+
+    <list>
+        <mapping class="com.DO.Prediction.client.coolweather.db.Province"/>
+        <mapping class="com.DO.Prediction.client.coolweather.db.City"/>
+        <mapping class="com.DO.Prediction.client.coolweather.db.County"/>
+    </list>
+</litepal>
