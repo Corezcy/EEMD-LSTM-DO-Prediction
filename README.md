@@ -6,6 +6,7 @@ EEMD、LSTM、time series prediction、DO（dissolved oxygen）
  This paper presents an improved LSTM model, the EEMD-LSTM model. After the original dissolved oxygen time series is obtained and preprocessed, the method is decomposed into several subsequences by EEMD, and LSTM prediction models are established for them respectively, and the prediction results of each model are superimposed to obtain the final prediction results. After obtaining the dissolved oxygen data of Jiangsu Wuxi Yangtze River Water Quality Real-Time Monitoring Station, the experiment was carried out, and the original LSTM model, the improved BP model, and the original BP model were selected for comparison. The experiment showed that the EEMD-LSTM model has the smallest prediction error and a better simulation The trend of the dissolved oxygen time series has the best prediction effect.
  
  该文件夹包含三个部分，分别模型部分、服务器端部分、安卓app端部分
+ 
  The folder contains three parts, the model part, the server part, and the Android app part
  
  结束
