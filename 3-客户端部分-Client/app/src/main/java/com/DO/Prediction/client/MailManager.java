@@ -25,8 +25,8 @@ import javax.mail.internet.MimeMultipart;
  */
 public class MailManager {
 
-    private static final String SENDER_NAME = "767607163@qq.com";
-    private static final String SENDER_PASS = "vwsucgupzuzjbbbj";
+    private static final String SENDER_NAME = "";
+    private static final String SENDER_PASS = "";
     private static final String VALUE_MAIL_HOST = "smtp.qq.com";
     private static final String KEY_MAIL_HOST = "mail.smtp.host";
     private static final String KEY_MAIL_AUTH = "mail.smtp.auth";
