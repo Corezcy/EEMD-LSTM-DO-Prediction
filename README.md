@@ -10,8 +10,3 @@ EEMD(集合经验模态分解)、LSTM(长短时记忆网络)、time series predi
  该文件夹包含三个部分，分别模型部分、服务器端部分、安卓app端部分
  
  The folder contains three parts, the model part, the server part, and the Android app part
- 
- 结束
- 
- Finish
- 
