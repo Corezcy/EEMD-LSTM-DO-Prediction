@@ -1,4 +1,4 @@
-# EEMD-LSTM-prediction-DO
+# EEMD-LSTM-DO-prediction
 EEMD(集合经验模态分解)、LSTM(长短时记忆网络)、time series prediction(时间序列预测)、DO（dissolved oxygen,溶解氧）
 
 
