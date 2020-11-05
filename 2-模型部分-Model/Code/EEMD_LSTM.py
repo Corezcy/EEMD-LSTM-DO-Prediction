@@ -177,75 +177,75 @@ if __name__ == '__main__':
     eemd = EEMD()
     eemd.noise_seed(12345)
     imfs = eemd.eemd(DO.reshape(-1),None,8)
-    #
-    # # print(imfs.shape)
-    # c = int(len(DO) * .85)
-    # lookback_window = 6
-    # imfs_prediction = []
+    
+    # print(imfs.shape)
+    c = int(len(DO) * .85)
+    lookback_window = 6
+    imfs_prediction = []
 
-    # i = 1
-    # for imf in imfs:
-    #    plt.subplot(len(imfs), 1, i)
-    #    plt.plot(imf)
-    #    i += 1
+    i = 1
+    for imf in imfs:
+       plt.subplot(len(imfs), 1, i)
+       plt.plot(imf)
+       i += 1
 
-    # plt.savefig('result_imf.png')
-    # plt.show()
+    plt.savefig('result_imf.png')
+    plt.show()
 
-    # test = np.zeros([len(DO) - c - lookback_window, 1])
+    test = np.zeros([len(DO) - c - lookback_window, 1])
 
-    # i = 1
-    # for imf in imfs:
-    #     print('-' * 45)
-    #     print('This is  ' + str(i) + '  time(s)')
-    #     print('*' * 45)
-    #     X1_train, Y1_train, X1_test, Y1_test = data_split(imf_data(imf, 1), c, lookback_window)
-    #     X2_train, Y2_train, X2_test, Y2_test = data_split_LSTM(X1_train, Y1_train, X1_test, Y1_test)
-    #     test += Y2_test
-    #     model = load_model('../lbw6/EEMD-LSTM-imf' + str(i) + '-100.h5')
-    #     prediction_Y = model.predict(X2_test)
-    #
-    #     imfs_prediction.append(prediction_Y)
-    #     i += 1;
+#     i = 1
+#     for imf in imfs:
+#         print('-' * 45)
+#         print('This is  ' + str(i) + '  time(s)')
+#         print('*' * 45)
+#         X1_train, Y1_train, X1_test, Y1_test = data_split(imf_data(imf, 1), c, lookback_window)
+#         X2_train, Y2_train, X2_test, Y2_test = data_split_LSTM(X1_train, Y1_train, X1_test, Y1_test)
+#         test += Y2_test
+#         model = load_model('../lbw6/EEMD-LSTM-imf' + str(i) + '-100.h5')
+#         prediction_Y = model.predict(X2_test)
+    
+#         imfs_prediction.append(prediction_Y)
+#         i += 1;
 
-    # i = 1
-    # for imf in imfs:
-    #    print('-'*45)
-    #    print('This is  ' + str(i)  + '  time(s)')
-    #    print('*'*45)
-    #    X1_train, Y1_train, X1_test, Y1_test = data_split(imf_data(imf,1), c, lookback_window)
-    #    X2_train, Y2_train, X2_test, Y2_test = data_split_LSTM(X1_train, Y1_train, X1_test, Y1_test)
-    #    test += Y2_test
-    #    model = LSTM_Model(X2_train,Y2_train,i)
-    #    model.save('../lbw6/EEMD-LSTM-imf' + str(i) + '-100.h5')
-    #    prediction_Y = model.predict(X2_test)
-    #    imfs_prediction.append(prediction_Y)
-    #    i+=1;
+    i = 1
+    for imf in imfs:
+       print('-'*45)
+       print('This is  ' + str(i)  + '  time(s)')
+       print('*'*45)
+       X1_train, Y1_train, X1_test, Y1_test = data_split(imf_data(imf,1), c, lookback_window)
+       X2_train, Y2_train, X2_test, Y2_test = data_split_LSTM(X1_train, Y1_train, X1_test, Y1_test)
+       test += Y2_test
+       model = LSTM_Model(X2_train,Y2_train,i)
+       model.save('../lbw6/EEMD-LSTM-imf' + str(i) + '-100.h5')
+       prediction_Y = model.predict(X2_test)
+       imfs_prediction.append(prediction_Y)
+       i+=1;
 
-    #
-    # imfs_prediction = np.array(imfs_prediction)
-    # prediction = [0.0 for i in range(len(test))]
-    # prediction = np.array(prediction)
-    # for i in range(len(test)):
-    #     t = 0.0
-    #     for imf_prediction in imfs_prediction:
-    #         t += imf_prediction[i][0]
-    #     prediction[i] = t
-    #
-    # prediction = prediction.reshape(prediction.shape[0], 1)
-    #
-    # test = scaler_DO.inverse_transform(test)
-    # prediction = scaler_DO.inverse_transform(prediction)
-    #
-    # # plot_curve(test, prediction)
-    # # print(RMSE(test, prediction))
-    # # print(MAPE(test, prediction))
-    #
-    # rmse=format(RMSE(test,prediction),'.4f')
-    # mape=format(MAPE(test,prediction),'.4f')
-    # r2 = format(r2_score(test, prediction), '.4f')
-    # mae = format(mean_absolute_error(test, prediction), '.4f')
-    # print('RMSE:' + str(rmse) + '\n' +  'MAE:' + str(mae) + '\n' + 'MAPE:' + str(mape) + '\n' + 'R2:' + str(r2))
-    #
-    #
-    #
+    
+    imfs_prediction = np.array(imfs_prediction)
+    prediction = [0.0 for i in range(len(test))]
+    prediction = np.array(prediction)
+    for i in range(len(test)):
+        t = 0.0
+        for imf_prediction in imfs_prediction:
+            t += imf_prediction[i][0]
+        prediction[i] = t
+    
+    prediction = prediction.reshape(prediction.shape[0], 1)
+    
+    test = scaler_DO.inverse_transform(test)
+    prediction = scaler_DO.inverse_transform(prediction)
+    
+    # plot_curve(test, prediction)
+    # print(RMSE(test, prediction))
+    # print(MAPE(test, prediction))
+    
+    rmse=format(RMSE(test,prediction),'.4f')
+    mape=format(MAPE(test,prediction),'.4f')
+    r2 = format(r2_score(test, prediction), '.4f')
+    mae = format(mean_absolute_error(test, prediction), '.4f')
+    print('RMSE:' + str(rmse) + '\n' +  'MAE:' + str(mae) + '\n' + 'MAPE:' + str(mape) + '\n' + 'R2:' + str(r2))
+    
+    
+    
